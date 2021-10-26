@@ -7,7 +7,7 @@
  * @api public
  */
 module.exports = function() {
-  return async function isolated(ctx, next) {
+  return function isolated(ctx, next) {
     ctx.set('Cross-Origin-Opener-Policy', 'same-origin');
     ctx.set('Cross-Origin-Embedder-Policy', 'require-corp');
     next();
